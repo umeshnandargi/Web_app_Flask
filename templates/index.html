@@ -1,0 +1,23 @@
+<!DOCTYPE = html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>NMO: Numerical Methods & Optimization</title>
+        <link rel = "stylesheet" href ="{{ url_for('static', filename= 'css/main.css')}}">
+    </head>
+    <body>
+        <img src="{{url_for('static', filename='myimage.jpeg')}}">
+        <br>
+        <h1>NMO: Numerical Methods & Optimization<h1>
+        <br>
+        <form action="greet" method="post">
+            {% for message in get_flashed_messages() %}
+                <p>{{message}}</p>
+            {% endfor %}
+            <input type="text" name="name_input">
+            <br>
+            <input type="submit" value="GREET" id="greet">
+        </form>
+
+    </body>
+</html>
